@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import { styled, sx } from "@/components/styled";
 import { Container, Header } from "@/components/Header/Header";
 import { cookies } from "next/headers";
+import { Counter } from "@/components/Counter";
 
 const fs = 22;
 
@@ -137,33 +138,20 @@ export default function Home() {
             <Code>src/app/page.tsx</Code>
           </p>
           <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{" "}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+            <Counter />
           </div>
         </Container>
       </Description>
 
       <div className={styles.center}>
         <Image
-          className={sx({
+          className={sx(({ theme, darkTheme }: any) => ({
             position: "relative",
+            backgroundColor: theme.palette.primary.main,
             "@media (prefers-color-scheme: dark)": {
               filter: "invert(1) drop-shadow(0 0 0.3rem #ffffff70)",
             },
-          })}
+          }))}
           src="/next.svg"
           alt="Next.js Logo"
           width={180}
