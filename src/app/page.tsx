@@ -1,13 +1,15 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { styled, sx } from "@/components/styled";
+import { sx } from "@/components/styled";
 import { Container, Header } from "@/components/Header/Header";
 import { cookies } from "next/headers";
 import { Counter } from "@/components/Counter";
+import { styled } from "@linaria/react";
 
 const fs = 22;
 
 const Main = styled.main({
+  // @ts-ignore
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
@@ -15,6 +17,7 @@ const Main = styled.main({
   minHeight: "100vh",
 });
 
+// @ts-ignore
 const Description = styled.div(({ theme }: any) => ({
   display: "inherit",
   justifyContent: "inherit",
@@ -41,6 +44,7 @@ const Description = styled.div(({ theme }: any) => ({
   },
 }));
 
+// @ts-ignore
 const Code = styled.code(({ theme }: any) => ({
   fontWeight: "700",
   fontFamily: theme.typography.fontFamilyCode,
@@ -65,6 +69,7 @@ const Grid = styled.div`
 `;
 
 const Card = styled.a({
+  // @ts-ignore
   padding: "1rem 1.2rem",
   borderRadius: "var(--border-radius)",
   background: "rgba(var(--card-rgb), 0)",

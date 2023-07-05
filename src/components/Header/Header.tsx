@@ -1,6 +1,7 @@
 import { alpha } from "@mui/system/colorManipulator";
-import { styled } from "../styled";
+import { styled } from "@linaria/react";
 
+// @ts-ignore
 export const Header = styled.header(({ theme }: any) => ({
   width: "100%",
   position: "sticky",
@@ -16,6 +17,7 @@ export const Header = styled.header(({ theme }: any) => ({
   }),
 }));
 
+// @ts-ignore
 export const Container = styled.div(({ theme }: any) => ({
   width: "100%",
   marginLeft: "auto",

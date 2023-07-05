@@ -1,7 +1,6 @@
 const { alpha } = require("@mui/system/colorManipulator");
 const { createTheme } = require("@mui/material");
 const withLinaria = require("next-with-linaria");
-const path = require("path");
 
 const defaultTheme = createTheme();
 
@@ -344,11 +343,9 @@ const nextConfig = {
     tagResolver(_importPath, importName) {
       switch (importName) {
         case "styled":
-          // return "@mui/linaria-processor/styled";
-          return path.join(process.cwd(), "./processors/styled.js");
+          return "@mui/linaria-processor/styled";
         case "sx":
-          // return "@mui/linaria-processor/sx";
-          return path.join(process.cwd(), "./processors/sx.js");
+          return "@mui/linaria-processor/sx";
         default:
           return null;
       }
