@@ -121,7 +121,11 @@ export default function Home() {
   const currentMode = cookies().get("mode");
   async function updateMode() {
     "use server";
-    cookies().set("mode", currentMode?.value === "dark" ? "" : "dark");
+    if (currentMode?.value === "dark") {
+      cookies().delete("mode");
+    } else {
+      cookies().set("mode", "dark");
+    }
   }
 
   return (

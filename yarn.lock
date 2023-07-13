@@ -1270,7 +1270,6 @@
     "@babel/types" "^7.22.5"
     "@emotion/css" "^11.11.2"
     "@emotion/serialize" "^1.1.2"
-    "@linaria/babel-preset" "^4.4.5"
     "@linaria/react" "^4.3.8"
     "@linaria/tags" "^4.3.5"
     "@mui/system" "^5.13.6"
